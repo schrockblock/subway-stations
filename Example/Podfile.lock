@@ -1,0 +1,16 @@
+PODS:
+  - SubwayStations (0.1.0)
+
+DEPENDENCIES:
+  - SubwayStations (from `../`)
+
+EXTERNAL SOURCES:
+  SubwayStations:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SubwayStations: 376b4142a5c17a7aff8c5f9bd0ad9a40d8df5519
+
+PODFILE CHECKSUM: e19289ad3799dccc89d8d75cf7abc9a65d25a7ec
+
+COCOAPODS: 1.0.0.beta.2
