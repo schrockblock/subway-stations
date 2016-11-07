@@ -16,12 +16,12 @@ public protocol Station {
 public func ==(lhs: Station, rhs: Station) -> Bool {
     if let lhsName = lhs.name {
         if let rhsName = rhs.name {
-            if lhsName.lowercaseString == rhsName.lowercaseString {
+            if lhsName.lowercased() == rhsName.lowercased() {
                 return true
             }
             
-            let lhsArray = lhsName.lowercaseString.componentsSeparatedByString(" ")
-            let rhsArray = rhsName.lowercaseString.componentsSeparatedByString(" ")
+            let lhsArray = lhsName.lowercased().components(separatedBy: " ")
+            let rhsArray = rhsName.lowercased().components(separatedBy: " ")
             
             if lhsArray.count == rhsArray.count {
                 for lhsComponent in lhsArray {

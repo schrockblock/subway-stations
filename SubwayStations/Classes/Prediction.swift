@@ -9,23 +9,23 @@
 import UIKit
 
 public enum Direction: Int {
-    case Uptown = 0
-    case Downtown = 1
+    case uptown = 0
+    case downtown = 1
 }
 
-public class Prediction {
-    public var secondsToArrival: Int? {
+open class Prediction {
+    open var secondsToArrival: Int? {
         if let arrival = timeOfArrival {
             return Int(arrival.timeIntervalSinceNow)
         }else{
             return nil
         }
     }
-    public var timeOfArrival: NSDate?
-    public var direction: Direction?
-    public var route: Route?
+    open var timeOfArrival: Date?
+    open var direction: Direction?
+    open var route: Route?
     
-    public init(time: NSDate?) {
+    public init(time: Date?) {
         timeOfArrival = time
     }
 }

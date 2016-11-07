@@ -13,7 +13,7 @@ public protocol StationManager {
     var routes: Array<Route> { get set }
     var timeLimitForPredictions: Int32 { get set }
     
-    func stationsForSearchString(stationName: String!) -> Array<Station>?
-    func predictions(station: Station!, time: NSDate!) -> Array<Prediction>
-    func routeIdsForStation(station: Station) -> Array<String>
+    func stationsForSearchString(_ stationName: String!) -> Array<Station>?
+    func predictions(_ station: Station!, time: Date!) -> Array<Prediction>
+    func routeIdsForStation(_ station: Station) -> Array<String>
 }

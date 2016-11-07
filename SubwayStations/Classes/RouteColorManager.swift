@@ -9,5 +9,5 @@
 import UIKit
 
 public protocol RouteColorManager {
-    func colorForRouteId(routeId: String!) -> UIColor
+    func colorForRouteId(_ routeId: String!) -> UIColor
 }
