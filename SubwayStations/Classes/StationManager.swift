@@ -16,4 +16,5 @@ public protocol StationManager {
     func stationsForSearchString(_ stationName: String!) -> Array<Station>?
     func predictions(_ station: Station!, time: Date!) -> Array<Prediction>
     func routeIdsForStation(_ station: Station) -> Array<String>
+    func stationsForRoute(_ route: Route) -> Array<Station>?
 }
