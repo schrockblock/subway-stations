@@ -15,6 +15,8 @@ Pod::Spec.new do |s|
 This provides classes/protocols for use in subway apps. Most subway app UIs will tell you more or less the same thing about stations, trains, and schedules; this pod makes it easy to abstract how you get that data and build a reusable UI based purely on generalizations.
                        DESC
 
+  s.swift_version    = '4.1'
+
   s.homepage         = 'https://github.com/schrockblock/subway-stations'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Elliot' => '' }
