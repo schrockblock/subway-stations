@@ -13,4 +13,13 @@ public protocol Stop {
     var objectId: String! { get set }
     var parentId: String! { get set }
     var station: Station! { get set }
+    var latitude: Double? { get set }
+    var longitude: Double? { get set }
+}
+
+extension Stop {
+    func location() -> (Double, Double)? {
+        guard let lat = latitude, let lon = longitude else { return nil }
+        return (lat, lon)
+    }
 }

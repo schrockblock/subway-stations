@@ -13,6 +13,16 @@ public protocol Station {
     var stops: Array<Stop> { get set }
 }
 
+extension Station {
+    func distance(to point: (Double, Double), _ metric: ((Double, Double), (Double, Double)) -> Double) -> Double {
+        let sortedStops = stops.filter { $0.location() != nil }.sorted { metric(point, $0.location()!) < metric(point, $1.location()!)}
+        if let stop = sortedStops.first {
+            return metric(point, stop.location()!)
+        }
+        return Double.infinity
+    }
+}
+
 public func ==(lhs: Station, rhs: Station) -> Bool {
     if let lhsName = lhs.name {
         if let rhsName = rhs.name {
