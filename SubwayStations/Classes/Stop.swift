@@ -18,7 +18,7 @@ public protocol Stop {
 }
 
 extension Stop {
-    func location() -> (Double, Double)? {
+    public func location() -> (Double, Double)? {
         guard let lat = latitude, let lon = longitude else { return nil }
         return (lat, lon)
     }

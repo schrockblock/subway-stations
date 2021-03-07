@@ -14,7 +14,7 @@ public protocol Station {
 }
 
 extension Station {
-    func distance(to point: (Double, Double), _ metric: ((Double, Double), (Double, Double)) -> Double) -> Double {
+    public func distance(to point: (Double, Double), _ metric: ((Double, Double), (Double, Double)) -> Double) -> Double {
         let sortedStops = stops.filter { $0.location() != nil }.sorted { metric(point, $0.location()!) < metric(point, $1.location()!)}
         if let stop = sortedStops.first {
             return metric(point, stop.location()!)

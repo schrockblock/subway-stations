@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SubwayStations'
-  s.version          = '0.2.3'
+  s.version          = '0.2.4'
   s.summary          = 'Provides abstract structure for subway apps in Swift'
 
   s.description      = <<-DESC
